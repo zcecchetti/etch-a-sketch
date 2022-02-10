@@ -12,6 +12,9 @@ Write JS to take accept user input for number of div boxes to fit into div conta
 need to be able to darken div elements when mouse hovers over. Should include a function to clear
 div containers (erase users drawing)
 
+    - to start off, have script input div boxes with something visible in them to make sure code
+    is working how I think it is
+
 Add additional optional functions to JS to allow random colors when user selects "random" color
 option. Create animation of etch-a-sketch being shaken when contents are deleted.
 
