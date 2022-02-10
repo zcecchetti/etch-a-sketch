@@ -1,0 +1,19 @@
+This is both the pseudocode and organized workflow for my etch-a-sketch project...
+-------------------------------------------------------------------------------------------------
+
+
+Create HTML webpage with basic structure that includes all necessary elements and a
+container for the div's that will be generated with JS
+
+Create structure of webpage with CSS stylesheet to align all elements on page and constrict
+div container to 960px x 960px
+
+Write JS to take accept user input for number of div boxes to fit into div container. JS will
+need to be able to darken div elements when mouse hovers over. Should include a function to clear
+div containers (erase users drawing)
+
+Add additional optional functions to JS to allow random colors when user selects "random" color
+option. Create animation of etch-a-sketch being shaken when contents are deleted.
+
+-------------------------------------------------------------------------------------------------
+
