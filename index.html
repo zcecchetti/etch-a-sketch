@@ -5,6 +5,7 @@
 <head>
 
     <meta charset="8">
+    <link rel="stylesheet" href="stylesheet.css">
     <title>Etch-A-Sketch</title>
 </head>
 
@@ -12,8 +13,10 @@
 
     <div id="header">
 
-        <a href="https://github.com/zcecchetti">GitHub</a> 
-        <a href="https://www.linkedin.com/in/zach-cecchetti-a53825132/">LinkedIn</a>
+        <div class="links">
+            <a href="https://github.com/zcecchetti">GitHub</a> 
+            <a href="https://www.linkedin.com/in/zach-cecchetti-a53825132/">LinkedIn</a>
+        </div>
     </div>
 
     <div id="description">
@@ -25,21 +28,25 @@
 
     <div id="etchSketch">
 
-        <div id="coloredPlastic"></div>
+        <div id="plasticContainer">
 
-        <div id="divContainer"></div>
+            <div id="divContainer"></div>
 
-        <div id="buttons">
+            <div id="knobs">
 
-            <div id="button"></div>
-            <div id="button"></div>
+                <div id="knob"></div>
+                <div id="knob"></div>
+            </div>
         </div>
     </div>
 
     <div id="options">
 
-        <button>Reset</button>
+        <p>Resolution: <input type="text" placeholder="length"> x <input type="text" placeholder="width"></p>
+        <p>|</p>
         <p>Sketch Color: <button>Black</button> <button>Random</button></p>
+        <p>|</p>
+        <button id="reset">Reset</button>
     </div>
 
 </body>

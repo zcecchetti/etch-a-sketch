@@ -1,0 +1,100 @@
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 10em;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgb(221, 229, 253);
+    color: rgb(78, 76, 67);
+}
+
+p {
+
+    margin: 0;
+}
+
+a, a:visited {
+
+    color: rgb(78, 76, 67);
+    text-decoration: none;
+}
+
+#header {
+
+    margin: 0;
+    padding: 20px 20px 0 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.links {
+
+    display: flex;
+    flex: 0;
+    gap: 12px;
+    color: rgb(78, 76, 67);
+}
+
+#description, #etchSketch {
+
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+#options {
+
+    display: flex;
+    justify-content: start;
+    padding: 20px 20px;
+    gap: 60px;
+}
+
+#reset {
+
+    width: 50px;
+}
+
+#plasticContainer{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    height: 540px;
+    width: 1088px;
+    gap: 32px;
+    padding: 64px 0 32px 0;
+    background-color: rgb(209, 78, 78);
+    box-shadow: 2px -2px 0 4px rgba(209, 78, 78, 0.829);
+}
+
+#divContainer {
+
+    display: flex;
+    height: 540px;
+    width: 960px;
+    background-color: rgb(245, 243, 243);
+    border-radius: 2px;
+
+}
+
+#knobs {
+
+    display: flex;
+    background-color: rgb(209, 78, 78);
+    height: 64px;
+    width: 960px;
+    justify-content: space-between;
+}
+#knob {
+
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    background-color: rgb(243, 237, 212);
+    box-shadow: 2px -2px 2px 2px rgb(206, 201, 180);
+}
