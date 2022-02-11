@@ -29,7 +29,7 @@ a, a:visited {
     justify-content: flex-end;
     border-bottom: 4px dashed rgb(78, 76, 67);
 }
-s
+
 .links {
 
     display: flex;
@@ -76,11 +76,12 @@ s
 #divContainer {
 
     display: flex;
+    flex-direction: column;
+    flex: 1;
     height: 540px;
     width: 960px;
     background-color: rgb(245, 243, 243);
     border-radius: 2px;
-
 }
 
 #knobs {
@@ -100,14 +101,22 @@ s
     box-shadow: 2px -2px 2px 2px rgb(206, 201, 180);
 }
 
-.sketcher {
+.blankElement {
 
     display: flex;
     flex: 1;
     background-color: rgb(245, 243, 243);
 }
 
-.sketcher:hover {
+.coloredElement {
 
+    display: flex;
+    flex: 1;
     background-color:rgb(78, 76, 67);
+}
+
+.row {
+
+    display: flex;
+    flex: 1;
 }

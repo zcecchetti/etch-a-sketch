@@ -6,6 +6,7 @@
 
     <meta charset="8">
     <link rel="stylesheet" href="stylesheet.css">
+    <script src="javascript.js" defer></script>
     <title>Etch-A-Sketch</title>
 </head>
 
@@ -14,7 +15,7 @@
     <div id="header">
 
         <div class="links">
-            <a href="https://github.com/zcecchetti">GitHub</a> 
+            <a href="https://github.com/zcecchetti/etch-a-sketch">GitHub</a> 
             <a href="https://www.linkedin.com/in/zach-cecchetti-a53825132/">LinkedIn</a>
         </div>
     </div>
@@ -31,7 +32,7 @@
         <div id="plasticContainer">
 
             <div id="divContainer">
-                <div class="sketcher"></div>
+                <div class="row"></div>
             </div>
 
             <div id="knobs">
@@ -44,8 +45,11 @@
 
     <div id="options">
 
-        <p>Resolution: <input type="text" placeholder="length"> x <input type="text" placeholder="width">
-        <button id="generate">Generate</button></p>
+        <p>
+            Resolution: <input id="width" type="number" placeholder="width"> x 
+            <input id="height" type="number" placeholder="height">
+            <button id="generate">Generate</button>
+        </p>
         <p>|</p>
         <p>Sketch Color: <button>Black</button> <button>Random</button></p>
         <p>|</p>
