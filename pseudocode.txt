@@ -12,11 +12,33 @@ Write JS to take accept user input for number of div boxes to fit into div conta
 need to be able to darken div elements when mouse hovers over. Should include a function to clear
 div containers (erase users drawing)
 
-    - to start off, have script input div boxes with something visible in them to make sure code
-    is working how I think it is
+    - to start off, have script input div boxes in row then have script input columns from user
+        inputs
 
 Add additional optional functions to JS to allow random colors when user selects "random" color
 option. Create animation of etch-a-sketch being shaken when contents are deleted.
 
 -------------------------------------------------------------------------------------------------
+
+event listener event to occur when "generate" button is pressed
+    function to create div boxes
+        takes user input number for width and creates a single row of that length inside <p> 
+            element
+        takes user input number for height and appends the single row n times until correct
+            height is reached
+    
+event listener to occur when "reset" button is pressed
+    function to reset div boxes is called, however the width and height are predetermined at
+        960 x 540 div elements.
+    function to animate and shake etchSketch block side to side (optional)
+
+event listener to occur when "black" sketch color button is pressed (will also be default)
+    function to change div classes to css class that is styled with a black background after 
+        user hovers over element
+    function to change div classes to css class that is styled slightly darker after each time
+        user hovers over element
+
+event listener to occur when "random" sketch color button is pressed
+    function to change div classes to css class that is styled with a black background after user
+        hovers over element
 
