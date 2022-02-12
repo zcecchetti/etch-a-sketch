@@ -16,9 +16,11 @@ function createDisplay(displayWidth, displayHeight) {
     const row = document.createElement("div");
     row.classList.add("row");
 
+    
+
     for (let width = 0; width < displayWidth; width++) {
         const div = document.createElement('div');
-        div.classList.add("blankElement");
+        div.classList.add(`blankElement`);
         row.appendChild(div);
     };
 
@@ -58,3 +60,14 @@ window.onload = function() {
 
     createDisplay(displayWidth, displayHeight);
 }
+
+// Function to change element class's when mouse hovers over
+
+function colorElement() {
+
+    const element = document.querySelector(".blankElement");
+    element.classList.add("coloredElement");
+    element.classList.remove("blankElement");
+};
+
+window.addEventListener("mouseover", colorElement);

@@ -105,10 +105,16 @@ a, a:visited {
 
     display: flex;
     flex: 1;
-    background-color: rgb(245, 243, 243);
 }
 
 .blankElement:hover {
+
+    display: flex;
+    flex: 1;
+    background-color:rgb(78, 76, 67);
+}
+
+.coloredElement {
 
     display: flex;
     flex: 1;
