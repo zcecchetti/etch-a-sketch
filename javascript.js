@@ -37,3 +37,24 @@ function resetToZero() {
         divContainer.removeChild(divContainer.firstChild);
     };
 };
+
+// Reset button event listener that creates a default resolution at 96 x 54
+
+const reset = document.querySelector("#reset");
+reset.addEventListener("click", () => {
+
+    const displayHeight = 54;
+    const displayWidth = 96; 
+
+    createDisplay(displayWidth, displayHeight);
+});
+
+// On page load, generate default resolution
+
+window.onload = function() {
+
+    const displayHeight = 54;
+    const displayWidth = 96; 
+
+    createDisplay(displayWidth, displayHeight);
+}
