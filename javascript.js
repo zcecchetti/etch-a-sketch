@@ -13,20 +13,20 @@ function createDisplay(displayWidth, displayHeight) {
 
     resetToZero();
     const divContainer = document.getElementById("divContainer");
-    const row = document.createElement("div");
-    row.classList.add("row");
-
     
 
-    for (let width = 0; width < displayWidth; width++) {
-        const div = document.createElement('div');
-        div.classList.add(`blankElement`);
-        row.appendChild(div);
-    };
-
     for (let height = 0; height < displayHeight; height++) {
-        const rowClone = row.cloneNode(true);
-        divContainer.appendChild(rowClone);
+        const row = document.createElement("p");
+        row.classList.add("row");
+
+        for (let width = 0; width < displayWidth; width++) {
+            const div = document.createElement('div');
+            div.classList.add("blankElement");
+            div.setAttribute("onmouseover", "colorElement(this)");
+            row.appendChild(div);
+        };
+
+        divContainer.appendChild(row);
     }
 };
 
@@ -63,11 +63,8 @@ window.onload = function() {
 
 // Function to change element class's when mouse hovers over
 
-function colorElement() {
+function colorElement(obj) {
 
-    const element = document.querySelector(".blankElement");
-    element.classList.add("coloredElement");
-    element.classList.remove("blankElement");
+    obj.classList.add("coloredElement");
+    obj.classList.remove("blankElement");
 };
-
-window.addEventListener("mouseover", colorElement);
