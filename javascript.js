@@ -3,8 +3,16 @@
 
 const generate = document.querySelector("#generate");
 generate.addEventListener("click", () => {
-    const displayHeight = document.getElementById("height").value;
-    const displayWidth = document.getElementById("width").value;  
+    let displayHeight = document.getElementById("height").value;
+    let displayWidth = document.getElementById("width").value;  
+
+    if (displayHeight > 100) {
+        displayHeight = 100;
+    };
+
+    if (displayWidth > 100) {
+        displayWidth = 100;
+    };
 
     createDisplay(displayWidth, displayHeight);
 });
@@ -67,6 +75,6 @@ window.onload = function() {
 
 function colorElement(obj) {
 
-    obj.classList.add("coloredElement");
+    obj.classList.add("coloredElementBlack");
     obj.classList.remove("blankElement");
 };
