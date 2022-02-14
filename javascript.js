@@ -73,8 +73,72 @@ window.onload = function() {
 
 // Function to change element class's when mouse hovers over
 
+let colorCall = 1;
+
+// In colorCall, 1 = black, 2 = blue, 3 = red, 4 = green, 5 = rainbow
+
 function colorElement(obj) {
 
-    obj.classList.add("coloredElementBlack");
+    if (colorCall === 1) {
+
+        obj.classList.add("coloredElementBlack");
+    } else if (colorCall === 2) {
+        
+        obj.classList.add("coloredElementBlue");
+    } else if (colorCall === 3) {
+
+        obj.classList.add("coloredElementRed");
+    } else if (colorCall === 4) {
+
+        obj.classList.add("coloredElementGreen");
+    } else {
+
+        obj.classList.add("coloredElementRainbow");
+    }
+    
     obj.classList.remove("blankElement");
 };
+
+// Change color from black to rainbow
+
+const blackButton = document.getElementById("black");
+const blueButton = document.getElementById("blue");
+const redButton = document.getElementById("red");
+const greenButton = document.getElementById("green");
+const rainbowButton = document.getElementById("rainbow");
+
+function changeToBlack() {
+
+    colorCall = 1;
+    return colorCall;
+};
+
+function changeToBlue() {
+
+    colorCall = 2;
+    return colorCall;
+};
+
+function changeToRed() {
+
+    colorCall = 3;
+    return colorCall;
+};
+
+function changeToGreen() {
+
+    colorCall = 4;
+    return colorCall;
+};
+
+function changeToRainbow() {
+
+    colorCall = 5;
+    return colorCall;
+}
+
+blackButton.addEventListener("click", changeToBlack);
+blueButton.addEventListener("click", changeToBlue);
+redButton.addEventListener("click", changeToRed);
+greenButton.addEventListener("click", changeToGreen);
+rainbowButton.addEventListener("click", changeToRainbow);
