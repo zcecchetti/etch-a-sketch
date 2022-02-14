@@ -6,12 +6,12 @@ generate.addEventListener("click", () => {
     let displayHeight = document.getElementById("height").value;
     let displayWidth = document.getElementById("width").value;  
 
-    if (displayHeight > 100) {
-        displayHeight = 100;
+    if (displayHeight > 100 || displayHeight < 1) {
+        displayHeight = 54;
     };
 
-    if (displayWidth > 100) {
-        displayWidth = 100;
+    if (displayWidth > 100 || displayWidth < 1) {
+        displayWidth = 96;
     };
 
     createDisplay(displayWidth, displayHeight);
@@ -33,7 +33,6 @@ function createDisplay(displayWidth, displayHeight) {
             div.classList.add("blankElement");
             div.setAttribute("onmouseover", "colorElement(this)");
             let newColor = setRainbow();
-            console.log(setRainbow());
             div.setAttribute("style", `background-color: ${newColor}`);
             row.appendChild(div);
         };
@@ -117,6 +116,7 @@ function colorElement(obj) {
         obj.classList.remove("coloredElementBlue");
         obj.classList.remove("coloredElementRed");
         obj.classList.remove("coloredElementGreen");
+        obj.classList.remove("coloredElementBlack");
         obj.classList.remove("blankElement");
     }
 };
