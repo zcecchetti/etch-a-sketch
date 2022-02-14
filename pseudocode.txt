@@ -36,7 +36,7 @@ event listener to occur when "black" sketch color button is pressed (will also b
     function to change div classes to css class that is styled with a black background after 
         user hovers over element
     function to change div classes to css class that is styled slightly darker after each time
-        user hovers over element
+        user hovers over element (optional)
 
 event listener to occur when "random" sketch color button is pressed
     function to change div classes to css class that is styled with a black background after user

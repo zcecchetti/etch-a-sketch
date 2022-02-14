@@ -44,11 +44,13 @@ function resetToZero() {
 
 const reset = document.querySelector("#reset");
 reset.addEventListener("click", () => {
-
+    const etchSketch = document.getElementById("etchSketch");
     const displayHeight = 54;
     const displayWidth = 96; 
 
+    etchSketch.classList.add("etchShake");
     createDisplay(displayWidth, displayHeight);
+    setTimeout(() => {etchSketch.classList.remove("etchShake")}, 1000);
 });
 
 // On page load, generate default resolution
