@@ -29,8 +29,12 @@ function createDisplay(displayWidth, displayHeight) {
 
         for (let width = 0; width < displayWidth; width++) {
             const div = document.createElement('div');
+            div.setAttribute("id", `${height}_${width}`)
             div.classList.add("blankElement");
             div.setAttribute("onmouseover", "colorElement(this)");
+            let newColor = setRainbow();
+            console.log(setRainbow());
+            div.setAttribute("style", `background-color: ${newColor}`);
             row.appendChild(div);
         };
 
@@ -82,21 +86,39 @@ function colorElement(obj) {
     if (colorCall === 1) {
 
         obj.classList.add("coloredElementBlack");
+        obj.classList.remove("coloredElementBlue");
+        obj.classList.remove("coloredElementRed");
+        obj.classList.remove("coloredElementGreen");
+        obj.classList.remove("blankElement");
     } else if (colorCall === 2) {
         
         obj.classList.add("coloredElementBlue");
+        obj.classList.remove("coloredElementBlack");
+        obj.classList.remove("coloredElementRed");
+        obj.classList.remove("coloredElementGreen");
+        obj.classList.remove("blankElement");
     } else if (colorCall === 3) {
 
         obj.classList.add("coloredElementRed");
+        obj.classList.remove("coloredElementBlue");
+        obj.classList.remove("coloredElementBlack");
+        obj.classList.remove("coloredElementGreen");
+        obj.classList.remove("blankElement");
     } else if (colorCall === 4) {
 
         obj.classList.add("coloredElementGreen");
+        obj.classList.remove("coloredElementBlue");
+        obj.classList.remove("coloredElementRed");
+        obj.classList.remove("coloredElementBlack");
+        obj.classList.remove("blankElement");
     } else {
 
         obj.classList.add("coloredElementRainbow");
+        obj.classList.remove("coloredElementBlue");
+        obj.classList.remove("coloredElementRed");
+        obj.classList.remove("coloredElementGreen");
+        obj.classList.remove("blankElement");
     }
-    
-    obj.classList.remove("blankElement");
 };
 
 // Change color from black to rainbow
@@ -135,6 +157,14 @@ function changeToRainbow() {
 
     colorCall = 5;
     return colorCall;
+}
+
+let colors = ["#ff0000", "#ffa500", "#ffff00", "#008000", "#0000ff", "#4b0082", "#ee82ee"];
+
+function setRainbow() {
+
+    let rainbowColor = colors[Math.floor(Math.random() * colors.length)];
+    return rainbowColor;
 }
 
 blackButton.addEventListener("click", changeToBlack);
